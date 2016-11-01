@@ -92,7 +92,7 @@ for n in `seq 1 $2`
 	for m in `seq 1 $pacbioErr`
 		do
 		#introduce errors
-		errLoc=`echo $(( $RANDOM % $(( pabcio - 2 )) + 2 ))`
+		errLoc=`echo $(( $RANDOM % $(( pacbio - 2 )) + 2 ))`
 		errNo=`echo $(( $RANDOM % $charsNoSpace + 1 ))`
 		errChar=`cat $3 | sed 's, ,,g' | cut -c$errNo`
 		before=$(( $errLoc - 1 ))
